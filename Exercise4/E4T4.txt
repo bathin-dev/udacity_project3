@@ -1,0 +1,15 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- Remove ingress and egress connection to internet from Security group
+- Put Web instance at private subnet
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- according to documentation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies-vpc-endpoint.html
+ -> I think we can implement solution
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, according to https://aws.amazon.com/vi/blogs/storage/encrypting-existing-amazon-s3-objects-with-the-aws-cli/#:~:text=Amazon%20S3's%20default%20encryption%20can,objects%20in%20the%20same%20bucket.
+-> we can not apply setting for exist data in bucket
+
+# What would happen if the original cloud formation templates are applied to this environment.
+- Original template include many security uncompilance and does not meet least security privillege -> make an unsecured system
