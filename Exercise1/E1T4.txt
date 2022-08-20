@@ -1,0 +1,6 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+All security group(Webapp, Instance) is open ingress access from 0.0.0.0/0 => need limit outside access for IP range or specific IP address
+# Poor practice 2
+Instance role is setting with poclicy name "InstanceRolePolicy-C3" opened access to all S3 bucket ('s3:*')-> need limit to target instance

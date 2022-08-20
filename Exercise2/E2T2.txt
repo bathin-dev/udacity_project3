@@ -1,0 +1,13 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+1/ Security group is open all connection (inbound/outbound) to internet
+2/ S3 bucket is not setting of server side encryption(secret receipt bucket)
+3/ S3 bucket can be access by any instance
+4/ Web server instance is not be placed in private subnet
+5/ Web server is allow password authentication
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+1/ Limit security group only allow for necessary protocol (ex: with Web server, only limit access from load balance with port 5000)
+2/ Change setting of server side encryption to target bucket to Enable(secret receipt bucket)
+3/ Limit access to S3 bucket with target instance's role
+4/ Setting web server instance to private instance, connection egress via internet gateway, connect ingress via ELB
+5/ Do now allow password login to importance instance
