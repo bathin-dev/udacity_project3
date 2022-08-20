@@ -1,0 +1,30 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+-Cfripper
+-Cloudsploit
+-Terrascan
+-Regula
+### Example vulnerability
+-IAM Policy is open with all permission 
+-Security group is open to all port with internet facing (0.0.0.0/0)
+-S3 bucket is public access
+-S3 bucket is not setting of versioning
+
+##Scan AMI’s or containers for OS vulnerabilities
+-AWS Inspector
+-Clair
+-Trivy
+
+### Example vulnerability
+-Allow SSH password login
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+-AWS config
+-AWS guard duty
+-AWS inspector
+
+### Example vulnerability
+- DDOS attack warning
+- AWS S3 is not enable server side encryption
+- Unnecessary port on instance or VPC is open with in/out trafict
